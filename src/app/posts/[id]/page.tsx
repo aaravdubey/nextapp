@@ -13,7 +13,11 @@ const getCachedPost = cache(async (id) => {
   })
 });
 
-export default async function Page({ params }) {
+export default async function Page({ params }: {
+  params: {
+    id: string;
+  }
+}) {
   const id = +params.id;
   const post = await getCachedPost(id);
 
