@@ -14,7 +14,7 @@ export default async function Page({ searchParams } : { searchParams: {
       <UserSearch />
 
       <div className="flex flex-wrap gap-5 py-5 w-full">
-        {users?.map((user, index) => {
+        {users?.map((user: any, index: number) => {
           if (user.name.toLowerCase().includes(query.toLowerCase()))
             return (
               <div
