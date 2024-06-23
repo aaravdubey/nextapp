@@ -13,7 +13,7 @@ export default async function Page({ searchParams } : { searchParams: {
     <div className="flex">
       <UserSearch />
 
-      <div className="flex flex-wrap gap-5 py-5 w-full">
+      <div className="flex flex-wrap gap-5 py-5 w-full x">
         {users?.map((user: any, index: number) => {
           if (user.name.toLowerCase().includes(query.toLowerCase()))
             return (
