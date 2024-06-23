@@ -40,7 +40,7 @@ export default async function Page() {
         <h1 className="mb-5 font-bold text-2xl">Posts</h1>
         <div className="flex flex-col gap-4">
           {posts.map((post, index) => (
-            <Link href={`posts/${post.id}`}>
+            <Link href={`posts/${post.id}`} key={post.id}>
               {index + 1}. {post.title}
             </Link>
           ))}
