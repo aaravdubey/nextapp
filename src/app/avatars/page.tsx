@@ -1,7 +1,9 @@
 import Image from "next/image";
 import UserSearch from "../ui/UserSearch";
 
-export default async function Page({ searchParams }) {
+export default async function Page({ searchParams } : { searchParams: {
+  name: string;
+} }) {
   const query = searchParams?.name || "";
 
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
